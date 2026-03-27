@@ -1,5 +1,14 @@
 {
   "buildCommand": "npm run build",
   "outputDirectory": ".",
-  "cleanUrls": false
+  "cleanUrls": false,
+  "headers": [
+    {
+      "source": "/library/(.*)",
+      "headers": [
+        { "key": "Content-Type", "value": "text/html" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
 }
